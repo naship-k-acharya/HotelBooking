@@ -1,0 +1,608 @@
+/*---------------------RESET CSS-------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*---------------------RESET CSS-------------------------*/
+/*--------------------- GENERAL -------------------------*/
+/* COLOR
+color 1 = FFE3AA
+color 2 = F3C466
+color 3 = D6A33E
+color 4 = B6841F
+color 5 = 906308
+*/
+html {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1rem;
+    line-height: 1.65;
+    background-color: #fff;
+    color: #000000;
+}
+
+a{
+    text-decoration: none;
+}
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+/*--------------------- GENERAL -------------------------*/
+
+/*--------------------- HEADER -------------------------*/
+
+/*--------------------- HEADER -------------------------*/
+
+/*--------------------- BANNER -------------------------*/
+.containerBanner {
+  /*height:100vh;*/
+  display:flex;
+  /*position:relative;*/
+  text-align:center;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.containerBanner img{
+  margin:0 auto;
+ /* width:100%; */
+  position:absolute;
+  top:25%;
+  left:40%;
+  z-index: 99;
+  color:#2a2722;
+}
+.containerBanner h3{
+  font-size:xx-large;
+  text-shadow: #151515;
+  margin:0 auto;
+  width:100%;
+  position:absolute;
+  top:50%;
+  z-index: 99;
+  color:#d3d1cc;
+}
+
+.item{
+  width:100%;
+  height:100vh;
+  filter: brightness(75%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.containerBanner ul{
+  width:100%;
+  display:flex;
+  position:absolute;
+  top:75%;
+  z-index: 99;
+  /*color:#FFE3AA;*/
+  justify-content:space-evenly;
+}
+
+.containerBanner li>a{
+  text-decoration: none;
+  font-size:20px;
+  color:rgb(180, 156, 100);
+  transition:0.3s;
+}
+
+.containerBanner li>a:hover{
+  font-size:22px;
+  color:#906308;
+  text-shadow:0 0 5px #3d3629, 0 0 10px #494439;
+}
+
+.test{
+  display:flex;
+  height:100vh;
+}
+
+.bannerDisplaySmall{
+ display: none;
+}
+
+.navbarPersoSmall{
+  display:none;
+}
+.blue-button {
+  background-color: rgb(56, 56, 67) !important; /* Add !important to override Bootstrap styles */
+  color: rgb(221, 211, 211);
+  border: none;
+  margin: 2px;
+  border-radius: 3px;
+  padding: 10px 20px !important;
+  cursor: pointer;
+}
+
+.blue-button:hover {
+  background-color: #335775 !important ;
+}
+
+
+/*+++++++++++++BANNER & NAVBAR RESPONSIVE++++++++++++++++++++++*/
+
+
+@media screen and (max-width:768px){
+  .banner{
+    display:block;
+    width: 100%;
+    height: 350px;
+    
+    
+  }
+  
+  .new{
+    
+    width: 100%;
+    position: relative;
+    top: 200px;
+    right: 13px;
+    
+  }
+  .menuList {
+    
+    margin-top: 10px;
+   
+    
+  }
+  
+
+  .navbarPerso {
+    flex-direction: column;
+    align-items: flex-start;
+}
+  .navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+ 
+
+  .navbarPersoSmall{
+    display:flex ;
+  }
+
+ 
+  .verticalMiddle{
+    display: flex;
+    align-items: center;
+  }
+
+  .cardBanner{
+    margin:0 auto;
+    text-align:center;
+    color:white;
+  }
+  .containerBanner{
+    position: relative;
+    top: 80px;
+    
+    
+
+  }
+  
+
+
+}
+
+
+/*+++++++++++++BANNER RESPONSIVE++++++++++++++++++++++*/
+
+/*--------------------- BANNER -------------------------*/
+
+/*--------------------- NAVBAR -------------------------*/
+
+nav{
+  margin:0 1.5em;
+}
+
+.navbarPerso{
+  /*line-height:2rem;*/
+  height:4em;
+  margin:0 auto;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+  padding: 0 5%;
+  color:white;
+}
+
+.fixed {
+  background-color:#F3C466;
+  opacity: 0.8;
+}
+
+
+.menuList{
+  display:flex;
+}
+
+.menuList p{
+  line-height: 4em;
+  margin: auto;
+}
+
+.menuList input{
+  vertical-align: middle;
+  height:22px;
+}
+
+.menuList form{
+  margin: auto;
+}
+
+.button-navbar-search{
+  background-color:lightgrey;
+  padding-bottom:10px;
+  margin-right:10px;
+}
+
+.option{
+  background: none;
+  border:none;
+  font-size:14px;
+  text-decoration: none;
+}
+
+
+.active{
+  text-shadow: 0 0 5px #FFE3AA, 0 0 10px #FFE3AA;
+}
+
+.logo-navbar img{
+  height:65px;
+}
+
+.logo img{
+  height:100px;
+}
+
+/*--------------------- NAVBAR -------------------------*/
+
+/*+++++++++++++NAVBAR RESPONSIVE++++++++++++++++++++++*/
+
+/*+++++++++++++NAVBAR RESPONSIVE++++++++++++++++++++++*/
+/*--------------------- MAIN -------------------------*/
+
+#first-section{
+  padding-top:50px;
+}
+
+#aboutUs{
+  margin:2em auto;
+}
+
+main h2, main h3{
+  color:#B6841F;
+}
+
+
+#firstParaRenew video{
+  width:100%;
+  margin:2em 0;
+  border:5px solid #F3C466;
+}
+@media screen and (max-width:768px){
+  #firstParaRenew video{
+    width: 360px;
+  }
+}
+
+
+#secondParaRenew iframe{
+  border:5px solid #F3C466;
+}
+
+.trait{
+  width:100px;
+  border:2px solid #F3C466;
+}
+
+/*CARD*/
+.card-room {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin:2em 0;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.card-room  img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-room h2 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-room p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  color:black;
+}
+
+
+.card-room .card-room-infos {
+  padding: 2em 0 0 1.5em;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-room-pricing {
+  color:black;
+  font-size:10px;
+  margin: 0;
+  position:absolute;
+  right:-10px;
+  bottom:-15px;
+}
+
+.card-room-infos{
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.cliquable-card a{
+  text-decoration:none;
+}
+
+#button {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#button:hover {
+  box-shadow: rgba(50, 227, 118, 0.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+#bookingForm {
+  display: none;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* Style for form labels */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Style for form input fields */
+input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style for the Submit Booking button */
+#submitBooking {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the Submit button on hover */
+#submitBooking:hover {
+  background-color: #0056b3;
+}
+/*CARD*/
+
+
+
+/* SLIDER RESTAURANT */
+#slider {
+  width: 80%;
+  max-width: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  
+}
+
+#slider figure {
+  display: flex; 
+  width: 400%; /* Adjusted to match the number of keyframes */
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+   /* Adjusted to match the keyframes */
+}
+
+#slider figure img {
+  width: 25%; /* Each image takes up 100% / 8 images */
+  height: auto;
+  animation: 64s slidy  infinite;
+}
+
+@keyframes slidy {
+  0% { transform: translateX(0%); }
+  20%, 40% { transform: translateX(-100%); }
+  60%, 80% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+
+/*RESTAURANT.HTML*/
+
+.card-restaurant{
+  margin:0 auto;
+  padding:1em;
+  width:75%;
+  display:flex;
+  border:2px solid #B6841F;
+  border-radius:10px;
+  justify-content: space-around;
+}
+
+.card-restaurant-info{
+  width:120%;
+  margin-left:1em;
+}
+
+.card-restaurant-info h4{
+  color:#F3C466;
+}
+
+.card-restaurant img{
+  width:40%;
+  height:auto;
+}
+
+.card-spa{
+/*  margin:0 auto;*/
+  padding:1em;
+  width:100%;
+  height:auto;
+  display:flex;
+  justify-content: space-between;
+}
+
+.card-spa img{
+  padding:1.5em;
+  width:auto;
+  height:auto;
+}
+
+@media screen and (max-width:767px){
+  .card-restaurant{
+    width:100%;
+    display:block;
+  }
+  .card-spa{
+    display:block;
+  }
+}
+
+
+/*RESTAURANT.HTML*/
+/*--------------------- MAIN -------------------------*/
+
+
+/*--------------------- FOOTER -------------------------*/
+
+footer{
+  margin:0 auto;
+  text-align:center;
+}
+
+.footer {
+  margin-top:50px;
+  background: #f1e8e9;
+  /*height: 100px;*/
+  width:100%;
+  padding: 25px 50px;
+  color: rgba(0,0,0,0.3);
+}
+
+.footer p{
+  font-style:italic;
+  color:black;
+}
+.footer-links {
+  /*display: flex;*/
+  margin:0 auto;
+}
+.footer-links a {
+  color: black;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 0.5;
+}
+
+
+/*--------------------- FOOTER -------------------------*/
