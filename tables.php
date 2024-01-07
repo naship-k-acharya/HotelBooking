@@ -42,6 +42,11 @@ include("dashboard.php");
                                     <i class='bx bx-edit' title="change role"></i>
                                     </a>
                                 </td>
+								<td>
+									<a href="delete.php?delete=<?= $row['id']; ?>" >
+										<i class='bx bx-trash' title="delete user"></i>
+									</a>
+								</td>
 								<!-- <td><img src="image/<?= $book['image'];?>" width="50" height="50"></td> -->
 							  </tr>
 							<?php }}?>

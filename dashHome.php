@@ -31,16 +31,25 @@ include('dashboard.php');
 
 			<ul class="box-info">
 				<li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>1020</h3>
-						<p>New Order</p>
-					</span>
-				</li>
+				<i class="bx bxs-calendar-check"></i>
+				<span class="text">
+					
+				
+
+		<?php
+			$sql = mysqli_query($conn,"SELECT * FROM bookings");
+			$orderCount = mysqli_num_rows($sql);
+			echo '<h3>' . $orderCount. '</h3>
+					<p>Order</p>
+			
+			';
+			
+			?></span>
+			</li>
 				<li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
-						<h3>2834</h3>
+						<h3>3</h3>
 						<p>Visitors</p>
 					</span>
 				</li>
@@ -48,14 +57,13 @@ include('dashboard.php');
 				<li>
 					<i class='bx bxs-dollar-circle' ></i>
 					<span class="text">
-						<h3>$2543</h3>
+						<h3>$0.00</h3>
 						<p>Total Sales</p>
 					</span>
 				</li>
+			
 			</ul>
-
-
-			<div class="table-data">
+		<div class="table-data">
 				<div class="order">
 					<div class="head">
 						<h3>Recent Orders</h3>
@@ -64,6 +72,7 @@ include('dashboard.php');
 					</div>
 					<table>
 						<thead>
+							
 							<tr>
 								<th>Room Type</th>
 								<th>Check In</th>
@@ -73,11 +82,9 @@ include('dashboard.php');
 							</tr>
 						</thead>
 						<tbody>
-							<?php
-                              $sql = mysqli_query($conn,"SELECT * FROM bookings");
-							  if(mysqli_num_rows($sql)>0 ){
-								foreach($sql as $book){
-							?>
+						<?php if(mysqli_num_rows($sql)>0 ){
+				foreach($sql as $book){ ?>
+
 							  <tr>
 								<td><?= $book['roomtype'];?></td>
 								<td><?= $book['check_in_date'];?></td>
